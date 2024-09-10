@@ -23,7 +23,7 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('https://volunteers-impact-initiative.vercel.app/api/contact', {// URL to interact with backend
+            const response = await fetch('volunteers-impact-initiative-backend.vercel.app/contact', {// URL to interact with backend
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
@@ -69,28 +69,7 @@ const Contact = () => {
         <div style={{fontSize:28, fontWeight:'bold', fontFamily: 'Arial',}}>And Take A Look At Productive Endeavours</div>
       </div>
 
-      {/* <div className='contact-form-div'>
-        <div className="contact-page">
-        <h2 className="contact-title">Contact Us</h2>
-        <form className="contact-form">
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="Enter your Name" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="Enter a valid email address" />
-            </div>
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea id="message" placeholder="Enter your message"></textarea>
-          </div>
-          <button type="submit" className="submit-button">SUBMIT</button>
-        </form>
-        </div>
-      </div> */}
+      
 
       <div className='contact-form-div'>
             <div className="contact-page">

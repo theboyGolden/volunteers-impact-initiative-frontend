@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
+/* VolunteerApplicationInfo.css */
+.application-container {
+  /* max-width: 600px; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  
+}
+
+.volunteernowimgdiv{
+  background-image: url('../Assets/becomeavolunteer.avif');
+  width: 100%;
+  height:500px;
+}
+
+.becomeavolunteertext{
+  position: relative;
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center;    /* Vertically centers the content */
+  text-align: center;     /* Centers text inside the element */
+  padding: 230px;
+  color:#fff;
+}
+
+.becomeavolunteertext h1 {
+  color: #fff;
+}
+
+.detailsList{
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center;    /* Vertically centers the content */
+  text-align: center;     /* Centers text inside the element */
+}
+
+.application-title {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.application-instructions {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.highlight-email {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.application-list {
+  list-style: none;
+  padding: 0;
+}
+
+.application-list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.icon {
+  color: #17a2b8;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.thank-you-message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #28a745;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.volunteer-page {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  color: #333;
+}
+
+/* .volunteer-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-header h1 {
+  color: #2a9df4;
+  margin-bottom: 10px;
+} */
+
+.volunteer-details {
+  margin-top: 20px;
+  padding: 15px;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-details h2 {
+  color: #d94e67;
+  margin-top: 20px;
+}
+
+.volunteer-opportunities, .help-list, .requirements, .visa-info, .included-info, .not-included {
+  list-style: none;
+  padding: 0;
+}
+
+.volunteer-opportunities li, .help-list li, .requirements li, .visa-info li, .included-info li, .not-included li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.volunteer-opportunities li:hover, .help-list li:hover, .requirements li:hover, .visa-info li:hover, .included-info li:hover, .not-included li:hover {
+  transform: scale(1.02);
+}
+
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.fees-table th, .fees-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.fees-table th {
+  background-color: #f4a460;
+  color: white;
+}
+
+.fees-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+
+
+.volunteer-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.volunteer-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.volunteer-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.volunteer-form-container input,
+.volunteer-form-container select,
+.volunteer-form-container textarea,
+.volunteer-form-container button {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.volunteer-form-container textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.volunteer-form-container button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.volunteer-form-container button:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+
+
+/* Responsive code */
+
+/* Responsive styles for smaller screens */
+@media (max-width: 939px) {
+  .application-container {
+    width: 90%;
+    /* padding: 15px; */
+    /* margin: 0 10px; */
+  }
+
+  .application-instructions {
+    font-size: 0.9rem;
+  }
+
+  .detailsList {
+    flex-direction: column; /* Stack the list items vertically on smaller screens */
+  }
+
+  .application-list li {
+    font-size: 0.9rem;
+    margin: 8px 0;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .thank-you-message {
+    font-size: 1rem;
+  }
+}
+
+/* Further adjustments for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .becomeavolunteertext{
+    position: relative;
+    display: flex;          /* Enables flexbox */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center;    /* Vertically centers the content */
+    text-align: center;     /* Centers text inside the element */
+    padding: 0px;
+    padding-top: 50px;
+    color:#fff;
+  }
+  
+  .application-container {
+   width: 80%;
+  }
+
+  .application-instructions {
+    font-size: 0.8rem;
+  }
+
+  .application-list li {
+    font-size: 0.8rem;
+    /* margin: 6px 0; */
+  }
+
+  .icon {
+    font-size: 0.9rem;
+  }
+
+  .thank-you-message {
+    font-size: 0.9rem;
+  }
+
+  .fees-table th, .fees-table td {
+    padding: 0px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+}

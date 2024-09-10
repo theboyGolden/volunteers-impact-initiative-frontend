@@ -1,0 +1,90 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Section Styles */
+.farmingsection,
+.teachingsection,
+.healthsection,
+.microfinancesection {
+    background-color: #F8EED3;
+    padding: 30px;
+}
+
+/* Flexbox Layouts */
+.farmingflexbox,
+.teachingflexbox,
+.healthflexbox,
+.microfinanceflexbox {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+}
+
+/* Text Box Styles */
+.farmingTextbox,
+.teachingTextbox,
+.healthTextbox,
+.microfinanceTextbox {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Limit max width */
+    font-size: 1rem;
+    font-family: 'Roboto', 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; /* Center on smaller screens */
+}
+
+/* Image Grid Layouts */
+.farmingImgGrid,
+.teachingImgGrid,
+.healthImgGrid,
+.microfinanceImgGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%; /* Full width */
+    max-width: 500px; /* Limit max width */
+}
+
+/* Image Styles */
+.farmingImg,
+.teachingImg,
+.healthImg,
+.microfinanceImg {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .farmingflexbox,
+    .teachingflexbox,
+    .healthflexbox,
+    .microfinanceflexbox {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center items */
+    }
+
+    .farmingImgGrid,
+    .teachingImgGrid,
+    .healthImgGrid,
+    .microfinanceImgGrid {
+        grid-template-columns: 1fr; /* Single column grid */
+    }
+
+    .farmingTextbox,
+    .teachingTextbox,
+    .healthTextbox,
+    .microfinanceTextbox {
+        padding: 15px;
+        font-size: 1rem; /* Slightly smaller font size */
+    }
+}

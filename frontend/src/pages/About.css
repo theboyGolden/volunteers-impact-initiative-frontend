@@ -1,0 +1,370 @@
+/* Link to Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+/* About Page */
+.about-page {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('../Assets/heroimageAboutpage.jpeg') center/cover no-repeat;
+    padding: 200px 20px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.hero-button {
+    padding: 10px 20px;
+    background-color: #71C1D2;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #5aa9b6;
+}
+
+
+
+
+
+/* Mission Section */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-title-text {
+    text-decoration: underline;
+  }
+  
+  .card-text {
+    text-align: center;
+  }
+  
+  .card-list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .card-list li {
+    margin-bottom: 10px;
+  }
+  
+  /* Specific Card Styles */
+  .mission-carddd {
+    background-color: #2a30dc;
+  }
+  
+  .goal-card {
+    background-color: #FFA500;
+  }
+  
+  .objectives-card {
+    background-color: #6495ED;
+  }
+
+.mission-section {
+    padding: 50px 20px;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.mission-statement {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.mission-subheading {
+    font-size: 2rem;
+    color: #71C1D2;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.mission-description,
+.mission-objectives,
+.mission-programmes {
+    margin-bottom: 20px;
+}
+
+.mission-objectives,
+.mission-programmes {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.mission-objectives li,
+.mission-programmes li {
+    margin-bottom: 10px;
+}
+
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust gap to control overlapping */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mission-card {
+    background: #f0f4f8;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #71C1D2;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.card-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+/* Team Section */
+.team-section {
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team-text {
+    max-width: 500px;
+    font-family: 'Lora', serif;
+    font-size: 14px;
+}
+
+.team-title {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-description {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.team-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.impact-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.impact-stats {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #71C1D2;
+}
+
+.testimonial {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #71C1D2;
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.cta-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #71C1D2;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0f3f7;
+}
+
+@media (max-width: 1460px) {
+    .mission-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px; /* Adjust gap to control overlapping */
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-photo {
+        margin-bottom: 15px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 60vh;
+        margin-top: 50px;
+        padding-top: 40px;
+      }
+    
+
+      .mission-subheading {
+        font-size: 2rem;
+        color: #71C1D2;
+        margin-top: 400px;
+        margin-left: 40px;
+    }
+
+    .mission-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px; /* Adjust gap to control overlapping */
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .mission-carddd {
+        background-color: #2a30dc;
+        margin-bottom: 10px;
+    }
+    
+    .goal-card {
+        background-color: #FFA500;
+        margin-bottom: 10px;
+    }
+    
+    .objectives-card {
+        background-color: #6495ED;
+        margin-bottom: 10px;
+      }
+    
+    
+}

@@ -1,0 +1,269 @@
+/* Main hero section styling */
+.heroSection {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  background-image: url('../Assets/ContactHero.jpg');
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Main container styling */
+.maincontactpagecontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Get in touch section styling */
+.getintouch {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Grid box layout */
+.gridbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-bottom: 20px;
+  justify-items: center;
+  text-align: center;
+}
+
+.contactfirstdiv {
+  background-color: #eaeaea;
+  width: 100%;
+}
+
+/* Contact boxes styling */
+.phonebox,
+.officebox,
+.mailbox {
+  background-color: #ffffff;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.imgdiv {
+  width: 50px;
+  height: 50px;
+  background-color: #71C1D2;
+  padding: 15px;
+  border-radius: 50px;
+}
+
+.contacticon {
+  width: 50px;
+  height: 50px;
+}
+
+.contactdetails {
+  color: rgb(254, 210, 98);
+}
+
+/* Social media container styling */
+.socialmediacontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.socialmedia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.socialmediagridbox {
+  background-color: #71C1D2;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialicon {
+  height: 40px;
+  width: 40px;
+}
+
+/* Contact form section styling */
+.contact-form-div {
+  width: 100%;
+  height: 800px;
+  background-image: url('../Assets/contactformbgpic.jpeg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #71C1D2;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #5aa9b6;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+  .gridbox {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .socialmedia {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .heroSection {
+      height: 250px; /* Adjust the height for smaller screens */
+      font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .gridbox {
+      grid-template-columns: 1fr; /* Stack items on smaller screens */
+      gap: 20px;
+  }
+
+  .phonebox,
+  .officebox,
+  .mailbox {
+      width: 100%;
+      max-width: 350px;
+      margin: 10px auto;
+      font-size: 18px; /* Adjust font size */
+  }
+
+  .socialmedia {
+      grid-template-columns: 1fr; /* Stack social media icons */
+      gap: 15px;
+  }
+
+  .socialmediagridbox {
+      width: 50px;
+      height: 50px;
+  }
+
+  .contact-page {
+      padding: 10px;
+  }
+
+  .form-row {
+      flex-direction: column;
+  }
+
+  .submit-button {
+      width: 100%;
+      margin-top: 10px;
+  }
+}
+
+/* Additional small screen adjustments */
+@media (max-width: 480px) {
+  .heroSection {
+      height: 200px; /* Further reduce height */
+      font-size: 1.2rem;
+  }
+
+  .contact-title {
+      font-size: 1.5rem; /* Adjust title size */
+  }
+
+  label {
+      font-size: 1rem; /* Adjust label size */
+  }
+
+  input,
+  textarea {
+      font-size: 0.9rem; /* Adjust input and textarea font size */
+  }
+}

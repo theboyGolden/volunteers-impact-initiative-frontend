@@ -1,0 +1,58 @@
+/* Home container with background image */
+.home-container {
+    position: relative;
+    background-image: url('../Assets/hero_image-ed.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Full-screen overlay */
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1;
+}
+
+/* Overlay content (text) */
+.overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Heading style */
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Paragraph style */
+.overlay p {
+    font-size: 1.5rem;
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .overlay h1 {
+        font-size: 2rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+}

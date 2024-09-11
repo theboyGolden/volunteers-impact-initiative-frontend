@@ -31,7 +31,7 @@ const VolunteerNow = () => {
     setIsSubmitting(true)
     
     try {
-      const response = await fetch('volunteers-impact-initiative-backend.vercel.app/api/volunteer', {
+      const response = await fetch('volunteers-impact-initiative-backend.vercel.app/volunteer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

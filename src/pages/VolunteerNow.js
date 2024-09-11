@@ -32,7 +32,7 @@ const VolunteerNow = () => {
     
     try {
       const response = await fetch('volunteers-impact-initiative-backend-deployed.vercel.app/volunteer', {
-        method: 'POST',
+        methods: [ 'GET', 'POST' ],
         headers: {
           'Content-Type': 'application/json',
         },

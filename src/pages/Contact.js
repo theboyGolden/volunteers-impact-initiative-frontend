@@ -23,7 +23,7 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('volunteers-impact-initiative-backend.vercel.app/contact', {// URL to interact with backend
+            const response = await fetch('volunteers-impact-initiative-backend.vercel.app/api/volunteerFormHandler', {// URL to interact with backend
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),

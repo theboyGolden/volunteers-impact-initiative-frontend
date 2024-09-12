@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 import phone from '../Assets/phone.png';
 import location from '../Assets/location.png';
@@ -8,38 +9,29 @@ import twitter from '../Assets/twitter.png';
 import instagram from '../Assets/instagram.png';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMessage, setResponseMessage] = useState('');
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Directly handle form submission to FormSubmit
-    try {
-      const response = await fetch('https://formsubmit.co/gettydenkyi@volunteersimpactinitiative.org', { 
-        method: 'POST',
-        body: new FormData(e.target), // Use FormData for form submission
+    emailjs
+      .sendForm('VII_smtp_service', 'template_c2600rb', form.current, 'EZkIjgNdwq8cuEOym')
+      .then(
+        () => {
+          setResponseMessage('Your message has been sent!');
+          e.target.reset(); // Reset form fields
+        },
+        (error) => {
+          console.error('EmailJS error:', error.text);
+          setResponseMessage('There was an error sending your message.');
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
       });
-
-      if (response.ok) {
-        setResponseMessage('Your message has been sent!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setResponseMessage('There was an error sending your message.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setResponseMessage('There was an error sending your message.');
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   return (
@@ -51,19 +43,19 @@ const Contact = () => {
         <br /> <br />
         <div className='gridbox'>
           <div className='phonebox'>
-            <div className='imgdiv'><img src={phone} alt='' className='contacticon' /></div><br />Phone
+            <div className='imgdiv'><img src={phone} alt='Phone icon' className='contacticon' /></div><br />Phone
             <div className='contactdetails'><br />+233(0)24-712-5235</div>
             <div className='contactdetails'>+233(0)20-122-1507</div>
           </div>
           <div className='officebox'>
-            <div className='imgdiv'><img src={location} alt='' className='contacticon' /></div><br />Location
+            <div className='imgdiv'><img src={location} alt='Location icon' className='contacticon' /></div><br />Location
             <br />
             <div className='contactdetails'><br />Opintinse Street, Kotobabi, Accra Ghana</div>
           </div>
           <div className='mailbox'>
-            <div className='imgdiv'><img src={email} alt='' className='contacticon' /></div><br />Email
+            <div className='imgdiv'><img src={email} alt='Email icon' className='contacticon' /></div><br />Email
             <br />
-            <div className='contactdetails'><br />gettydenkyi@gmail.com</div>
+            <div className='contactdetails'><br />gettydenkyi@volunteersimpactinitiative.org</div>
           </div>
         </div>
         <br /> <br />
@@ -71,9 +63,9 @@ const Contact = () => {
 
       <div className='socialmediacontainer'>
         <div className='socialmedia'>
-          <a href='https://www.facebook.com/VolunteersImpactInitiative/'><div className='socialmediagridbox'><img src={facebook} alt='' className='socialicon' /></div></a>
-          <a href='www.twitter.com'><div className='socialmediagridbox'><img src={twitter} alt='' className='socialicon' /></div></a>
-          <a href='www.instagram.com'><div className='socialmediagridbox'><img src={instagram} alt='' className='socialicon' /></div></a>
+          <a href='https://www.facebook.com/VolunteersImpactInitiative/'><div className='socialmediagridbox'><img src={facebook} alt='Facebook' className='socialicon' /></div></a>
+          <a href='https://www.twitter.com'><div className='socialmediagridbox'><img src={twitter} alt='Twitter' className='socialicon' /></div></a>
+          <a href='https://www.instagram.com'><div className='socialmediagridbox'><img src={instagram} alt='Instagram' className='socialicon' /></div></a>
         </div>
         <div style={{ fontSize: 28, fontWeight: 'bold', marginBottom: 20, fontFamily: 'Arial' }}><br />Connect With Us Using Our Social Media Handles</div>
         <div style={{ fontSize: 28, fontWeight: 'bold', fontFamily: 'Arial' }}>And Take A Look At Productive Endeavours</div>
@@ -82,29 +74,25 @@ const Contact = () => {
       <div className='contact-form-div'>
         <div className="contact-page">
           <h2 className="contact-title">Contact Us</h2>
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
             <div className="form-row">
               <div className="form-group">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="user_name">Name</label>
                 <input
                   type="text"
-                  id="name"
+                  id="user_name"
                   name="name"
                   placeholder="Enter your Name"
-                  value={formData.name}
-                  onChange={handleChange}
                   required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="user_email">Email</label>
                 <input
                   type="email"
-                  id="email"
+                  id="user_email"
                   name="email"
                   placeholder="Enter a valid email address"
-                  value={formData.email}
-                  onChange={handleChange}
                   required
                 />
               </div>
@@ -115,8 +103,6 @@ const Contact = () => {
                 id="message"
                 name="message"
                 placeholder="Enter your message"
-                value={formData.message}
-                onChange={handleChange}
                 required
               />
             </div>
